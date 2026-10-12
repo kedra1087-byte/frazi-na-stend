@@ -476,7 +476,7 @@ function BoothBody({
                 <p className="text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">
                   2. Потом по этой карточке
                 </p>
-                <p className="mt-2 text-[1.45rem] leading-[1.28] font-semibold text-balance">
+                <p className="mt-2 text-lg leading-relaxed font-semibold">
                   {card.bridge}
                 </p>
               </li>

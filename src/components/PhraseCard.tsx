@@ -21,7 +21,7 @@ export function PhraseCard({ kicker, children, note }: PhraseCardProps) {
       <h1
         ref={headingRef}
         tabIndex={-1}
-        className="mt-4 text-[1.65rem] leading-[1.25] font-semibold text-balance outline-none"
+        className="mt-4 text-xl leading-relaxed font-semibold outline-none"
       >
         {children}
       </h1>
