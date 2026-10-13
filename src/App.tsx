@@ -1,4 +1,5 @@
 import { useState, type ReactNode } from "react";
+import { QRCodeSVG } from "qrcode.react";
 import { Button } from "@/components/ui/button";
 import {
   caseById,
@@ -144,6 +145,22 @@ function CardSheet({ cardId, onBack }: { cardId: string; onBack: () => void }) {
           Балл за QR
         </p>
         <p className="mt-2 text-lg leading-relaxed font-semibold">{qrLine(card)}</p>
+        <div className="mt-4 flex justify-center">
+          <div className="rounded-2xl bg-white p-3">
+            <QRCodeSVG
+              value={card.url}
+              size={220}
+              level="Q"
+              marginSize={2}
+              bgColor="#ffffff"
+              fgColor="#101410"
+              title={card.course}
+            />
+          </div>
+        </div>
+        <p className="mt-3 text-center text-sm leading-relaxed text-faint">
+          Покажите этот код участнику. Камера читает его с экрана. {card.course}
+        </p>
         <a
           href={card.url}
           target="_blank"
